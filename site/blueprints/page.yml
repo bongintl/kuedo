@@ -1,0 +1,9 @@
+title: Page
+pages: false
+fields:
+  body:
+    type: textarea
+  info:
+    type: info
+    text: >
+      Formatting help: https://getkirby.com/docs/content/text

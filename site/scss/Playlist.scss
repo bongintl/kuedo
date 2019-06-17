@@ -1,0 +1,33 @@
+.playlist {
+    list-style: none;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    font-family: $sans;
+    font-size: 1rem * $sans-scale;
+    &__item {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-bottom: .5rem;
+        @include large {
+            padding-bottom: 0;
+        }
+        &_active {
+            justify-content: flex-start;
+            color: white;
+        }
+    }
+    &__left {
+        padding-right: .5rem;
+    }
+    &__right {
+        text-align: right;
+        .playlist__item_active & {
+            text-align: left;
+        }
+        span {
+            white-space: nowrap;
+        }
+    }
+}

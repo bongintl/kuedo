@@ -1,0 +1,31 @@
+.menu-item {
+    display: inline-flex;
+    height: 100%;
+    flex: 1;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    @include medium {
+        padding-bottom: 2rem;
+    }
+    &:hover {
+        color: white;
+    }
+    &:first-child {
+        padding-left: 1rem;
+    }
+    &__title {
+        white-space: initial;
+        margin-bottom: 0.5rem;
+        width: $home-column-small * 2 + $rem-small * 2;
+        @include medium {
+            width: $home-column-medium * 2 + $rem-medium;
+        }
+        @include large {
+            width: $home-column-large * 2 + $rem-large;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.scrubber {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-size: 100% 100%;
+    cursor: pointer;
+    width: $home-column-small / 2;
+    z-index: 10;
+    @include medium {
+        width: $home-column-medium / 2;
+    }
+    @include large {
+        width: $home-column-large / 2;
+    }
+    &__progress {
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        background: $pink;
+        mix-blend-mode: multiply;
+    }
+}

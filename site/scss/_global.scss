@@ -1,0 +1,44 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    position: relative;
+}
+
+@font-face {
+    font-family: "Electra Display";
+    src: url(/assets/fonts/ElectraLTStd-Display.otf);
+}
+
+@font-face {
+    font-family: "Grotesque MT";
+    src: url(/assets/fonts/GrotesqueMTStd-Bold.otf);
+}
+
+html {
+    background: $pink;
+    font-size: $rem-small;
+    @include small {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    @include medium {
+        font-size: $rem-medium;
+    }
+    @include large {
+        font-size: $rem-large;
+    }
+}
+
+body {
+    margin: 0;
+    background: black;
+    font-family: "Electra Display", serif;
+    min-height: 100vh;
+    overflow: hidden;
+    &.loading, &.loading * {
+        cursor: wait !important;
+    }
+}

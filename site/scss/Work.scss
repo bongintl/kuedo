@@ -1,0 +1,130 @@
+.work {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: $pink;
+    z-index: 20;
+    overflow: hidden;
+    // -webkit-mask-image: url(/static/mask.gif);
+    // -webkit-mask-size: 100% auto;
+    // -webkit-mask-position: 0 10%;
+    // -webkit-mask-repeat: repeat-x;
+    // transition: -webkit-mask-position .4s linear;
+    // transition: clip-path .4s linear;
+    // clip-path: inset( 0 0 0 0 );
+    &_transition-in {
+        // -webkit-mask-position: 0 100vh;
+        // clip-path: inset( 100% 0 0 0 );
+    }
+    &_transition-out {
+        // clip-path: inset( 0 0 100% 0 );
+    }
+    &__back {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        font-family: $sans;
+        font-size: 1rem * $sans-scale;
+        color: inherit;
+        text-decoration: none;
+        z-index: 50;
+        color: white;
+    }
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: inline;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: .5rem;
+        }
+    }
+    &__play-pause {
+        font-family: $sans;
+        font-size: 1rem * $sans-scale;
+        color: white;
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        &--play {
+            color: transparent;
+            &:after {
+                content: 'Play';
+                color: white;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+    &__artwork {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        @include medium {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &__body {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        padding-top: 3rem;
+        padding-bottom: 50vh;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-right: $home-column-small;
+        @include medium {
+            padding-top: 1rem;
+            padding-left: calc( ( ( 100vw - 1rem ) / 16 ) * 8 + 1rem );
+            padding-right: $home-column-medium;
+        }
+        @include large {
+            padding-left: calc( ( ( 100vw - 1rem ) / 16 ) * 10 + 1rem );
+            padding-right: $home-column-large;
+            font-size: 1.5rem;
+        }
+    }
+    &__description {
+        line-height: 1.2;
+        blockquote {
+            margin: 1rem 0;
+            font-family: $serif;
+        }
+        p {
+            margin: 1rem 0;
+        }
+        
+        a {
+            &, &:visited {
+                color: inherit;
+            }
+            text-decoration: none;
+            border-bottom: 1px solid white;
+            &:hover {
+                color: white;
+                border-bottom: 0;
+            }
+        }
+    }
+    &__buy {
+        margin-top: 2rem;
+        color: white;
+        font-family: $sans;
+        font-size: $sans-scale * 1rem;
+        text-decoration: none;
+        padding-bottom: .5em;
+        border-bottom: 1px solid white;
+        display: block;
+        &:hover {
+            color: $pink;
+            border-bottom: 1px solid $pink;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+title: Live
+pages: false
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  artwork:
+    label: Artwork
+    type:  image
+  track:
+    label: File
+    type: select
+    options: audio
+  timestamps: timestamps

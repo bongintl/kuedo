@@ -1,0 +1,50 @@
+.nav {
+    position: relative;
+    font-family: $sans;
+    display: flex;
+    padding-bottom: .5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 1rem * $sans-scale;
+    @include small {
+        flex-wrap: wrap;
+    }
+    @include medium {
+        padding-bottom: 1rem;
+    }
+    @include large {
+        padding-bottom: 2rem;
+    }
+    &__item {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        padding-right: 1rem;
+        padding-bottom: .5rem;
+        cursor: pointer;
+        z-index: 100;
+        flex-shrink: 0;
+        @include medium {
+            flex-basis: $home-column-medium + $rem-medium;
+            padding-bottom: 1rem;
+        }
+        @media screen and ( min-width: $home-column-medium * 12 + $rem-medium * 13 ) {
+            flex-basis: $home-column-medium * 2 + $rem-medium * 2;
+        }
+        @include large {
+            flex-basis: $home-column-large * 2 + $rem-large * 2;
+        }
+        &_active, &:hover {
+            color: white;
+        }
+        &:first-child {
+            @media screen and ( max-width: $home-column-small * 6 + $rem-small * 7 ) {
+                flex-shrink: 0;
+                flex-basis: 100%;
+            }
+            .work & {
+                color: white;
+            }
+        }
+    }
+}

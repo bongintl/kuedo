@@ -1,0 +1,10 @@
+title: Work
+files: false
+options:
+  preview: false
+  status: false
+  template: false
+  url: false
+  delete: false
+pages:
+  template: page

@@ -1,0 +1,32 @@
+.video {
+    margin-bottom: 2rem;
+    height: 0;
+    padding-bottom: 57%;
+    position: relative;
+    cursor: zoom-in;
+    background: black;
+    &_fullscreen {
+        position: fixed;
+        height: auto;
+        padding-bottom: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        cursor: zoom-out;
+        margin-bottom: 0;
+        @include medium {
+            right: $home-column-medium / 2;
+        }
+        @include large {
+            right: $home-column-large / 2;
+        }
+    }
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,32 @@
+.page {
+	overflow-y: scroll;
+	padding: 1rem 1rem 10rem 1rem;
+	background: $pink;
+	p {
+		font-family: $sans;
+        font-size: 1rem * $sans-scale;
+        padding-bottom: 1rem;
+	}
+	h1 {
+        font-weight: normal;
+        font-size: inherit;
+        line-height: 1.75rem;
+        font-size: 1.5rem;
+    }
+    h2, h3, h4, h5, h6 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1rem;
+        font-family: $serif;
+        line-height: 2rem;
+    }
+	p, h1, h2, h3, h4, h5, h6 {
+		max-width: 45rem;
+	}
+	figure {
+		margin: 0;
+	}
+	img {
+		width: 100%;
+	}
+}

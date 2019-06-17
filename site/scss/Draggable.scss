@@ -1,0 +1,22 @@
+.draggable {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex: 2;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    &__inner {
+        height: 100%;
+        white-space: nowrap;
+        & > * {
+            white-space: initial;
+            cursor: initial;
+        }
+    }
+    &_dragging {
+        cursor: grabbing;
+        .draggable__inner {
+            pointer-events: none;
+        }
+    }
+}

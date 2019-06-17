@@ -1,0 +1,16 @@
+.spectrogram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $player-width-small;
+    height: 100%;
+    display: none;
+    pointer-events: none;
+    @include medium {
+        display: block;
+        width: calc( ( ( 100vw - 1rem ) / 16 ) * 8 );
+    }
+    @include large {
+        width: calc( ( ( 100vw - 1rem ) / 16 ) * 9 );
+    }
+}

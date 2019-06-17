@@ -1,0 +1,33 @@
+title: Release
+pages: false
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  artwork:
+    label: Artwork
+    type:  image
+  description:
+    label: Description
+    type: textarea
+  tracks:
+    label: Tracks
+    type: structure
+    style: table
+    modalsize: large
+    fields:
+      title:
+        label: Title
+        type: text
+        required: true
+        width: 1/2
+      file:
+        label: File
+        type: select
+        options: audio
+        required: true
+        width: 1/2
+  buy:
+    label: Buy Link
+    type: url

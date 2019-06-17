@@ -1,0 +1,6 @@
+title: About
+files: false
+pages: false
+fields:
+  body:
+    type: textarea
